@@ -33,6 +33,7 @@
     <li><a href="#email">Имейли</a></li>
     <li><a href="#sms">SMS</a></li>
     <li><a href="#maps">Карти</a></li>
+    <li><a href="#scraping">Scraping</a></li>
     <li><a href="#deploy">Deployment</a></li>
     <li><a href="#db">Бази данни</a></li>
     <li><a href="#domains">Домейни</a></li>
@@ -284,6 +285,47 @@ git push -u origin nova-funkcia
       <p>Превръща адрес в координати и обратно, безплатно (публичният сървър е с лимит 1 заявка/сек — кеширайте резултатите). За маршрути: <a href="https://openrouteservice.org">OpenRouteService</a> с безплатен API ключ.</p>
       <a class="go" href="https://nominatim.org">nominatim.org →</a>
     </article>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section id="scraping">
+  <h2>Извличане на данни (web scraping)</h2>
+  <p class="lead">Когато MVP-то ви има нужда от съдържание, което вече съществува на друг сайт — обяви, цени, статии, разписания — можете да го извлечете автоматично. Ето как да подходите, от най-лесното към най-сложното.</p>
+
+  <div class="callout tip">
+    <p><strong>Златното правило: първо проверете за API, после мислете за парсене на HTML.</strong> Отворете сайта, натиснете F12 → таб Network → презаредете страницата и филтрирайте по „Fetch/XHR“. Много често съдържанието пристига като чист JSON от вътрешно API — и една заявка към него е десетократно по-лесна и по-стабилна от ровене в HTML. Този навик струва повече от всяка библиотека по-долу.</p>
+  </div>
+
+  <div class="cards">
+    <article class="card">
+      <h4>Jina Reader <span class="badge free">Безплатно</span></h4>
+      <p>Най-бързият начин за „копирам линк → взимам съдържанието“: слагате <code>r.jina.ai/</code> пред който и да е URL и получавате страницата като чист текст/markdown. Без код и без ключ за малки обеми — идеално за MVP.</p>
+      <a class="go" href="https://jina.ai/reader/">jina.ai/reader →</a>
+    </article>
+    <article class="card">
+      <h4>Firecrawl <span class="badge tier">Free tier</span></h4>
+      <p>URL → структуриран JSON или markdown през API; може да обходи и цял сайт. По-подреденият вариант, когато ви трябват конкретни полета (цена, заглавие, дата). Безплатните кредити стигат за проект.</p>
+      <a class="go" href="https://firecrawl.dev">firecrawl.dev →</a>
+    </article>
+    <article class="card">
+      <h4>requests + BeautifulSoup <span class="badge free">Безплатно</span></h4>
+      <p>Класиката в Python за статични страници: смъквате HTML-а и вадите елементите по CSS селектор. Селектора го взимате наготово от браузъра: десен бутон върху елемента → Inspect → десен бутон в кода → Copy selector. В Node еквивалентът е <code>fetch</code> + cheerio.</p>
+      <a class="go" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">beautifulsoup docs →</a>
+    </article>
+    <article class="card">
+      <h4>Playwright <span class="badge free">Безплатно</span></h4>
+      <p>Управлява истински браузър — за страници, които се строят с JavaScript и през <code>requests</code> изглеждат празни. По-бавен и по-тежък, затова е вторият избор, не първият.</p>
+      <a class="go" href="https://playwright.dev">playwright.dev →</a>
+    </article>
+  </div>
+
+  <div class="callout warn">
+    <p><strong>Уловката, в която всички стъпват:</strong> scraping не става от frontend JavaScript — браузърът блокира заявките към чужди сайтове (CORS). Извличането трябва да се случи на сървъра ви (или през Jina/Firecrawl като посредник), а frontend-ът да пита вашия сървър.</p>
+  </div>
+
+  <div class="callout warn">
+    <p><strong>Добри обноски (и самосъхранение):</strong> погледнете <code>robots.txt</code> и условията на сайта; слагайте пауза между заявките и кеширайте резултатите — стотици заявки в секунда водят до блокиран IP точно преди демото; и внимавайте с личните данни — извлечени имена и имейли на реални хора са GDPR територия, не материал за MVP.</p>
   </div>
 </section>
 
