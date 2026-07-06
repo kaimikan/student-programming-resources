@@ -5,17 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ресурси за летни стажанти · Враца 2026</title>
 <meta name="description" content="Инструменти, услуги и кратки ръководства за вашия MVP — безплатни или почти безплатни.">
+<script>
+  // преди CSS-а, за да няма премигване при зареждане
+  try {
+    const saved = localStorage.getItem('theme');
+    if (saved) document.documentElement.dataset.theme = saved;
+  } catch (e) {}
+</script>
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛰️</text></svg>">
 </head>
 <body>
 
 <header class="site">
+  <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Превключване светла/тъмна тема"></button>
   <h1>Ресурси за летни стажанти · Враца 2026</h1>
   <p class="tagline">Инструменти, услуги и кратки ръководства за вашия MVP — безплатни или почти безплатни. Проверено към юли 2026.</p>
-  <svg class="ridge" viewBox="0 0 720 60" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-    <path d="M0 55 L60 30 L110 45 L180 12 L240 40 L300 22 L360 48 L430 8 L500 38 L560 25 L620 45 L680 30 L720 50" />
-  </svg>
 </header>
 
 <div class="layout">
@@ -484,6 +489,20 @@ git push -u origin nova-funkcia
 </footer>
 
 <script>
+  const toggle = document.getElementById('theme-toggle');
+  const isDark = () => {
+    const t = document.documentElement.dataset.theme;
+    return t ? t === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+  };
+  const paint = () => { toggle.textContent = isDark() ? '☀' : '☾'; };
+  toggle.addEventListener('click', () => {
+    const next = isDark() ? 'light' : 'dark';
+    document.documentElement.dataset.theme = next;
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    paint();
+  });
+  paint();
+
   const links = document.querySelectorAll('nav.toc a');
   const byId = {};
   links.forEach(a => byId[a.getAttribute('href').slice(1)] = a);
