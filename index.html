@@ -115,6 +115,7 @@
   <p class="lead">Git пази историята на кода ви и позволява няколко души да работят по един проект, без да си пращат архиви по имейл. GitHub е сайтът, където живее споделеното копие (remote).</p>
 
   <h3>1. Настройка (веднъж на всеки компютър)</h3>
+  <p>Ако git го няма на компютъра — изтеглете го от <a href="https://git-scm.com/downloads">git-scm.com/downloads</a> (на Windows инсталацията включва и Git Bash терминал; проверявате с <code>git --version</code>). После се представете:</p>
   <pre><code>git config --global user.name "Иван Иванов"
 git config --global user.email "ivan@example.com"</code></pre>
 
@@ -316,6 +317,9 @@ git push -u origin nova-funkcia
   </div>
 
   <h3>Backend (Python, Node и т.н.)</h3>
+  <div class="callout tip">
+    <p><strong>Първо се запитайте: трябва ли ви изобщо собствен backend?</strong> Ако нуждите ви са регистрация/вход на потребители и записване и показване на съдържание — това е точно каквото <a href="#db">Supabase или Firebase</a> дават наготово: говорите с тях директно от frontend-а, с вградени правила кой какво може да чете и пише, и няма сървър за поддръжка и събуждане. Собствен сървър (Flask/FastAPI/Express) си заслужава, когато имате истинска сървърна логика: интеграции с външни API-та с тайни ключове, плащания, по-тежки изчисления.</p>
+  </div>
   <div class="cards">
     <article class="card">
       <h4>Render <span class="badge tier">Free tier</span></h4>
