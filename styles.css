@@ -103,9 +103,10 @@ header.site p.tagline {
   max-width: 55ch;
 }
 button.theme-toggle {
-  position: absolute;
+  position: fixed;
   top: 0.9rem;
   right: 0.9rem;
+  z-index: 30;
   width: 2.4rem;
   height: 2.4rem;
   border: 1px solid var(--border);
@@ -115,6 +116,7 @@ button.theme-toggle {
   font-size: 1.1rem;
   line-height: 1;
   cursor: pointer;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
 }
 button.theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
 
@@ -292,5 +294,12 @@ footer.site p { max-width: 60ch; margin: 0.4rem auto; }
   nav.toc a.active {
     border-color: var(--accent);
     background: var(--accent-soft);
+  }
+  /* горе стои лентата със секции — бутонът слиза долу вдясно */
+  button.theme-toggle {
+    top: auto;
+    bottom: 1rem;
+    width: 2.8rem;
+    height: 2.8rem;
   }
 }
