@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ресурси за летни стажанти · Враца 2026</title>
+<meta name="description" content="Инструменти, услуги и кратки ръководства за вашия MVP — безплатни или почти безплатни.">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛰️</text></svg>">
+</head>
+<body>
+
+<header class="site">
+  <h1>Ресурси за летни стажанти · Враца 2026</h1>
+  <p class="tagline">Инструменти, услуги и кратки ръководства за вашия MVP — безплатни или почти безплатни. Проверено към юли 2026.</p>
+  <svg class="ridge" viewBox="0 0 720 60" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+    <path d="M0 55 L60 30 L110 45 L180 12 L240 40 L300 22 L360 48 L430 8 L500 38 L560 25 L620 45 L680 30 L720 50" />
+  </svg>
+</header>
+
+<div class="layout">
+
+<nav class="toc" aria-label="Съдържание">
+  <ul>
+    <li><a href="#start">Начало</a></li>
+    <li><a href="#ai">AI асистенти</a></li>
+    <li><a href="#git">Git курс</a></li>
+    <li><a href="#email">Имейли</a></li>
+    <li><a href="#sms">SMS</a></li>
+    <li><a href="#maps">Карти</a></li>
+    <li><a href="#deploy">Deployment</a></li>
+    <li><a href="#db">Бази данни</a></li>
+    <li><a href="#domains">Домейни</a></li>
+    <li><a href="#marketing">Маркетинг</a></li>
+  </ul>
+</nav>
+
+<main>
+
+<!-- ============================================================ -->
+<section id="start">
+  <h2>Започнете оттук</h2>
+  <p class="lead">Всяка секция описва по няколко услуги с техните безплатни лимити и линк към официалната страница. Значението на етикетите:</p>
+
+  <div class="legend">
+    <span class="item"><span class="badge free">Безплатно</span> напълно безплатно, без уловки</span>
+    <span class="item"><span class="badge tier">Free tier</span> безплатен план с лимити, стига за MVP</span>
+    <span class="item"><span class="badge trial">Trial</span> безплатен пробен период / еднократен кредит</span>
+    <span class="item"><span class="badge paid">Платено</span> евтин платен план, когато си заслужава</span>
+    <span class="item"><span class="badge student">Студентско</span> безплатно с ученически/студентски имейл</span>
+  </div>
+
+  <div class="callout tip">
+    <p><strong>Първа задача за всеки екип: вземете си <a href="https://education.github.com/pack">GitHub Student Developer Pack</a>.</strong>
+    Регистрирате се с училищния/университетския си имейл (или снимка на документ за записване) и получавате безплатно:
+    GitHub Copilot, домейн <code>.me</code> или <code>.tech</code> за 1 година със SSL сертификат, $200 кредит в DigitalOcean,
+    $100 в Microsoft Azure, JetBrains IDE-та и още десетки инструменти. Това само по себе си покрива половината от този сайт.</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section id="ai">
+  <h2>AI асистенти за програмиране</h2>
+  <p class="lead">Екипите, които работят с AI асистент, стигат видимо по-далеч за две седмици. Изберете си един основен инструмент и го научете добре — не скачайте между пет.</p>
+
+  <div class="cards">
+    <article class="card">
+      <h4>GitHub Copilot <span class="badge student">Студентско</span></h4>
+      <p>Автодовършване и чат директно във VS Code. Безплатен за верифицирани студенти през Student Pack — най-лесният старт, ако вече имате учебен имейл.</p>
+      <a class="go" href="https://github.com/features/copilot">github.com/features/copilot →</a>
+    </article>
+    <article class="card">
+      <h4>Claude Code <span class="badge paid">Платено</span></h4>
+      <p>Агент в терминала и VS Code — може сам да чете проекта, да пише в няколко файла и да пуска команди. Включен в абонамента Claude Pro (~$20/мес). Силен за по-големи задачи.</p>
+      <a class="go" href="https://claude.com/claude-code">claude.com/claude-code →</a>
+    </article>
+    <article class="card">
+      <h4>Gemini CLI <span class="badge free">Безплатно</span></h4>
+      <p>Агент в терминала от Google с много щедър безплатен лимит срещу личен Google акаунт. Добра безплатна алтернатива на Claude Code.</p>
+      <a class="go" href="https://github.com/google-gemini/gemini-cli">github.com/google-gemini/gemini-cli →</a>
+    </article>
+    <article class="card">
+      <h4>Cursor <span class="badge tier">Free tier</span></h4>
+      <p>Редактор (базиран на VS Code) с вграден AI. Безплатният Hobby план е с лимити; Pro е ~$20/мес. Популярен избор, ако предпочитате всичко в редактора.</p>
+      <a class="go" href="https://cursor.com">cursor.com →</a>
+    </article>
+    <article class="card">
+      <h4>Windsurf <span class="badge tier">Free tier</span></h4>
+      <p>Друг AI редактор с безплатен план — сходен с Cursor. Пробвайте, ако лимитите на Cursor ви стягат.</p>
+      <a class="go" href="https://windsurf.com">windsurf.com →</a>
+    </article>
+    <article class="card">
+      <h4>AI вътре в приложението ви <span class="badge tier">Free tier</span></h4>
+      <p>Ако вашият MVP има AI функция: <a href="https://aistudio.google.com">Google AI Studio</a> дава безплатен API ключ за Gemini, а <a href="https://groq.com">Groq</a> — безплатен tier с много бързи open-source модели.</p>
+      <a class="go" href="https://aistudio.google.com">aistudio.google.com →</a>
+    </article>
+  </div>
+
+  <div class="callout warn">
+    <p><strong>Правилото при работа с AI:</strong> вие отговаряте за кода, не асистентът. Четете какво ви генерира, и правете <code>git commit</code> <em>преди</em> да пуснете AI по голяма промяна — така винаги можете да се върнете, ако забърка нещо.</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section id="git">
+  <h2>Git — кратък курс</h2>
+  <p class="lead">Git пази историята на кода ви и позволява няколко души да работят по един проект, без да си пращат архиви по имейл. GitHub е сайтът, където живее споделеното копие (remote).</p>
+
+  <h3>1. Настройка (веднъж на всеки компютър)</h3>
+  <pre><code>git config --global user.name "Иван Иванов"
+git config --global user.email "ivan@example.com"</code></pre>
+
+  <h3>2. Взимане на проекта</h3>
+  <pre><code><span class="cm"># съществуващ проект от GitHub:</span>
+git clone https://github.com/vashiat-ekip/proekt.git
+
+<span class="cm"># нов проект от нулата:</span>
+git init
+git remote add origin https://github.com/vashiat-ekip/proekt.git</code></pre>
+
+  <h3>3. Ежедневният цикъл</h3>
+  <pre><code>git pull                          <span class="cm"># 1. взимате промените на колегите (винаги първо!)</span>
+<span class="cm">#    ...работите...</span>
+git status                        <span class="cm"># 2. какво сте променили</span>
+git add .                         <span class="cm"># 3. избирате промените</span>
+git commit -m "Форма за вход"     <span class="cm"># 4. запис в историята с кратко описание</span>
+git push                          <span class="cm"># 5. качвате в GitHub</span></code></pre>
+  <p>Правила за екипа: <strong>pull преди да започнете</strong>, commit-вайте често (по-добре 10 малки, отколкото 1 огромен), пишете съобщения, които казват <em>какво</em> е направено.</p>
+
+  <h3>4. Конфликти</h3>
+  <p>Ако двама сте пипали един и същи ред, при <code>git pull</code> Git ще маркира файла с <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>. Отворете файла, оставете верния вариант, изтрийте маркерите и направете <code>git add .</code> + <code>git commit</code>. Не е страшно — случва се на всички.</p>
+
+  <h3>5. .gitignore — какво НЕ се качва</h3>
+  <p>Създайте файл <code>.gitignore</code> в корена на проекта още в началото:</p>
+  <pre><code>node_modules/
+__pycache__/
+*.pyc
+.env
+.DS_Store</code></pre>
+  <div class="callout warn">
+    <p><strong>Никога не качвайте пароли и API ключове в Git.</strong> Дръжте ги във файл <code>.env</code>, който е в <code>.gitignore</code>. Веднъж качен, ключът остава в историята завинаги (дори да го изтриете после) и ботове го намират за минути — тогава единственото решение е да го смените от сайта на услугата.</p>
+  </div>
+
+  <h3>6. Работа от различни (споделени) компютри</h3>
+  <p>Вие не работите всеки ден на една и съща машина, а компютрите са споделени. Проблемът: ако запазите паролата/токена си на диска, следващият човек на този компютър може да пише в GitHub от ваше име. Ето безопасната схема:</p>
+  <ol>
+    <li><strong>Направете си fine-grained token вместо парола:</strong> в GitHub → Settings → Developer settings → <a href="https://github.com/settings/personal-access-tokens">Fine-grained personal access tokens</a>. Ограничете го само до repo-то на проекта, права „Contents: Read and write“, и срок на валидност до края на програмата. Този token се използва вместо парола при <code>git push</code>. Ако изтече ключът — правите нов за 2 минути, а откраднат token не дава достъп до целия ви акаунт.</li>
+    <li><strong>Кажете на Git да помни токена само в паметта, не на диска:</strong>
+      <pre><code>git config --global credential.helper 'cache --timeout=28800'</code></pre>
+      Токенът се пази 8 часа в RAM и изчезва при рестарт — не остава файл на диска. (Ако някой преди вас е ползвал <code>store</code>, проверете и изтрийте: <code>rm -f ~/.git-credentials</code>.)</li>
+    <li><strong>В края на деня:</strong> излезте от github.com в браузъра (или изобщо влизайте само в частен/incognito прозорец), не позволявайте на браузъра да запази паролата, и излезте от сесията на компютъра.</li>
+  </ol>
+  <div class="callout tip">
+    <p><strong>Алтернатива без нищо локално:</strong> <a href="https://github.com/features/codespaces">GitHub Codespaces</a> — цял VS Code в браузъра, закачен за repo-то ви. Нищо не се пази на споделения компютър, а безплатният лимит е 120 core-часа на месец. Влизате от кой да е компютър само с GitHub акаунта си.</p>
+  </div>
+
+  <h3>7. Клонове (branches) — ако ви остане време</h3>
+  <p>За двуседмичен спринт е приемливо всички да работят в <code>main</code> с често pull-ване. Ако екипът е 3+ души и се настъпвате, минете на клонове:</p>
+  <pre><code>git switch -c nova-funkcia     <span class="cm"># нов клон</span>
+<span class="cm"># ...работите, add, commit...</span>
+git push -u origin nova-funkcia
+<span class="cm"># после в GitHub: Pull Request → Merge</span></code></pre>
+
+  <h3>Ресурси за упражнение</h3>
+  <ul class="links">
+    <li><a href="https://learngitbranching.js.org/?locale=bg_BG">Learn Git Branching</a> — интерактивна игра за git команди (има и на български)</li>
+    <li><a href="https://education.github.com/git-cheat-sheet-education.pdf">Git Cheat Sheet (PDF)</a> — една страница с всички команди</li>
+    <li><a href="https://docs.github.com/en/get-started/start-your-journey/hello-world">GitHub Hello World</a> — официалният урок за repo + branch + PR</li>
+    <li><a href="https://ohshitgit.com/">Oh Shit, Git!?!</a> — какво да направите, когато нещо се обърка</li>
+  </ul>
+</section>
+
+<!-- ============================================================ -->
+<section id="email">
+  <h2>Изпращане на имейли</h2>
+  <p class="lead">За изпращане на имейли от приложение (регистрации, нотификации, потвърждения) се използва email API услуга — не личен Gmail.</p>
+
+  <div class="cards">
+    <article class="card">
+      <h4>Resend <span class="badge tier">Free tier</span></h4>
+      <p>Най-приятният за програмисти: чист API, отлична документация, шаблони като React компоненти. 3 000 имейла/месец безплатно.</p>
+      <a class="go" href="https://resend.com">resend.com →</a>
+    </article>
+    <article class="card">
+      <h4>Brevo <span class="badge tier">Free tier</span></h4>
+      <p>Най-щедрият безплатен план: 300 имейла/ден без кредитна карта. API + визуален редактор за кампании.</p>
+      <a class="go" href="https://brevo.com">brevo.com →</a>
+    </article>
+    <article class="card">
+      <h4>EmailJS <span class="badge tier">Free tier</span></h4>
+      <p>Изпращане директно от frontend JavaScript, без собствен сървър — удобно за чисто статични сайтове с контактна форма. 200 имейла/месец безплатно.</p>
+      <a class="go" href="https://emailjs.com">emailjs.com →</a>
+    </article>
+    <article class="card">
+      <h4>Mailtrap <span class="badge tier">Free tier</span></h4>
+      <p>„Фалшива” пощенска кутия за разработка: приложението ви „изпраща”, но писмата се хващат в тестова кутия и не стигат до реални хора. Тествайте тук, преди да пуснете истински имейли.</p>
+      <a class="go" href="https://mailtrap.io">mailtrap.io →</a>
+    </article>
+  </div>
+
+  <h3>Защо писмата ви отиват в Spam?</h3>
+  <p>Няколко екипа вече се сблъскаха с това. Най-честите причини, подредени по вероятност:</p>
+  <ol>
+    <li><strong>Изпращате през личен Gmail (SMTP/nodemailer).</strong> Gmail не е за автоматични писма — има строги лимити и писмата от скрипт изглеждат като спам. Ползвайте услуга от горните.</li>
+    <li><strong>Липсват SPF, DKIM и DMARC записи.</strong> Това са три DNS записа, които доказват, че вашият сървър има право да изпраща от името на домейна ви. Без тях получаващият сървър няма как да ви разпознае и ви праща в спам. Когато „верифицирате домейн” в Resend/Brevo, те ви дават наготово точно тези записи — просто ги добавяте в DNS-а на домейна си.</li>
+    <li><strong>Нямате собствен домейн.</strong> От споделения тестов домейн на услугата (напр. <code>onboarding@resend.dev</code>) доставимостта е слаба. Истинската доставимост започва със собствен домейн (вижте секция <a href="#domains">Домейни</a>).</li>
+    <li><strong>Съдържанието изглежда спам:</strong> САМО ГЛАВНИ БУКВИ, много удивителни, куп линкове, само една голяма картинка без текст.</li>
+    <li><strong>Нов домейн без репутация.</strong> Първите дни изпращайте малко и постепенно — репутацията се гради.</li>
+  </ol>
+  <div class="callout tip">
+    <p><strong>Проверете се:</strong> пратете писмо до <a href="https://www.mail-tester.com">mail-tester.com</a> — дава ви оценка от 10 и списък какво точно ви куца (SPF? DKIM? съдържание?).</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section id="sms">
+  <h2>Изпращане на SMS</h2>
+  <p class="lead">SMS е осезаемо по-скъп и по-регулиран от имейла. За MVP демо trial план стига, но прочетете ограниченията, за да не ви изненадат на демо деня.</p>
+
+  <div class="cards">
+    <article class="card">
+      <h4>Twilio <span class="badge trial">Trial</span></h4>
+      <p>Индустриалният стандарт. Trial акаунтът дава ~$15 кредит, но: изпраща само до 5 предварително верифицирани номера, максимум 50 съобщения/ден, и всеки SMS започва с „Sent from a Twilio trial account“.</p>
+      <a class="go" href="https://www.twilio.com/try-twilio">twilio.com →</a>
+    </article>
+    <article class="card">
+      <h4>Vonage <span class="badge trial">Trial</span></h4>
+      <p>Основната алтернатива на Twilio, с €2 начален кредит и подобни trial ограничения (само верифицирани номера). API-то е също толкова просто.</p>
+      <a class="go" href="https://www.vonage.com/communications-apis/">vonage.com →</a>
+    </article>
+    <article class="card">
+      <h4>Telegram Bot API <span class="badge free">Безплатно</span></h4>
+      <p>Хитрият заобиколен път: ако целта е „приложението да ми праща известия“, Telegram бот го прави напълно безплатно, без лимити и без верифициране на номера. За MVP често е по-добрият избор от SMS.</p>
+      <a class="go" href="https://core.telegram.org/bots">core.telegram.org/bots →</a>
+    </article>
+    <article class="card">
+      <h4>Textbelt <span class="badge tier">Free tier</span></h4>
+      <p>Най-простото възможно API (една HTTP заявка), с 1 безплатен SMS на ден за тестове. За реална употреба се плаща на бройка.</p>
+      <a class="go" href="https://textbelt.com">textbelt.com →</a>
+    </article>
+  </div>
+
+  <div class="callout warn">
+    <p><strong>За демото:</strong> с trial акаунт верифицирайте предварително номерата на целия екип и на менторите. Ако демонстрирате пред публика с произволни номера, ще ви трябва ъпгрейднат акаунт (минимално зареждане ~$20) — планирайте това няколко дни по-рано.</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section id="maps">
+  <h2>Карти в приложението</h2>
+  <p class="lead">За повечето MVP-та изобщо не ви трябва Google Maps — има напълно безплатни варианти на базата на OpenStreetMap.</p>
+
+  <div class="cards">
+    <article class="card">
+      <h4>Leaflet + OpenStreetMap <span class="badge free">Безплатно</span></h4>
+      <p>Най-лесната интерактивна карта: една JS библиотека (~42 KB), безплатни OSM плочки, маркери, попъпи. 10 реда код и имате карта. Започнете оттук.</p>
+      <a class="go" href="https://leafletjs.com">leafletjs.com →</a>
+    </article>
+    <article class="card">
+      <h4>MapLibre GL <span class="badge free">Безплатно</span></h4>
+      <p>Векторни карти с плавно въртене/накланяне (усещане като Google Maps), open source. Малко по-сложна от Leaflet.</p>
+      <a class="go" href="https://maplibre.org">maplibre.org →</a>
+    </article>
+    <article class="card">
+      <h4>Google Maps Platform <span class="badge tier">Free tier</span></h4>
+      <p>От март 2025 г. няма ги старите $200/мес кредит — сега всяко API има собствен безплатен лимит (напр. 10 000 зареждания/мес за основните). Изисква кредитна карта. Embed API-то (iframe) е неограничено безплатно.</p>
+      <a class="go" href="https://developers.google.com/maps">developers.google.com/maps →</a>
+    </article>
+    <article class="card">
+      <h4>Nominatim (геокодиране) <span class="badge free">Безплатно</span></h4>
+      <p>Превръща адрес в координати и обратно, безплатно (публичният сървър е с лимит 1 заявка/сек — кеширайте резултатите). За маршрути: <a href="https://openrouteservice.org">OpenRouteService</a> с безплатен API ключ.</p>
+      <a class="go" href="https://nominatim.org">nominatim.org →</a>
+    </article>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section id="deploy">
+  <h2>Deployment — приложението онлайн</h2>
+  <p class="lead">Първо си отговорете: имате ли backend? Статичен сайт или чист frontend (HTML/React/Vue) се качва безплатно завинаги. Backend (Python/Node сървър) също има безплатни опции, но с уловки.</p>
+
+  <h3>Frontend / статични сайтове</h3>
+  <div class="cards">
+    <article class="card">
+      <h4>Vercel <span class="badge tier">Free tier</span></h4>
+      <p>Свързвате GitHub repo-то и всеки push се деплойва сам. Идеален за React/Next.js, поддържа и serverless функции. Hobby планът е безплатен за лични проекти.</p>
+      <a class="go" href="https://vercel.com">vercel.com →</a>
+    </article>
+    <article class="card">
+      <h4>Netlify <span class="badge tier">Free tier</span></h4>
+      <p>Същата идея като Vercel, плюс безплатни бонуси като форми и redirect-и. 100 GB трафик/месец.</p>
+      <a class="go" href="https://netlify.com">netlify.com →</a>
+    </article>
+    <article class="card">
+      <h4>Cloudflare Pages <span class="badge tier">Free tier</span></h4>
+      <p>Неограничен трафик за статични сайтове + безплатни Workers за малки API-та. Много щедър безплатен план.</p>
+      <a class="go" href="https://pages.cloudflare.com">pages.cloudflare.com →</a>
+    </article>
+    <article class="card">
+      <h4>GitHub Pages <span class="badge free">Безплатно</span></h4>
+      <p>Най-простото: чист HTML/CSS/JS директно от repo-то ви, на адрес <code>ekip.github.io/proekt</code>. Без builds, без настройки.</p>
+      <a class="go" href="https://pages.github.com">pages.github.com →</a>
+    </article>
+  </div>
+
+  <h3>Backend (Python, Node и т.н.)</h3>
+  <div class="cards">
+    <article class="card">
+      <h4>Render <span class="badge tier">Free tier</span></h4>
+      <p>Безплатни web services (750 часа/мес), деплой от GitHub. Уловката: безплатното приложение заспива след 15 мин без посещения и се събужда за 30–60 сек.</p>
+      <a class="go" href="https://render.com">render.com →</a>
+    </article>
+    <article class="card">
+      <h4>PythonAnywhere <span class="badge tier">Free tier</span></h4>
+      <p>Специално за Flask/Django: безплатен план с едно уеб приложение, което не заспива. По-старомоден интерфейс, но надежден за учебни проекти.</p>
+      <a class="go" href="https://pythonanywhere.com">pythonanywhere.com →</a>
+    </article>
+    <article class="card">
+      <h4>Railway <span class="badge paid">Платено</span></h4>
+      <p>Много приятен за ползване, но вече без безплатен план — еднократен $5 trial кредит, после Hobby план от $5/мес. Добър избор след програмата, ако проектът продължи.</p>
+      <a class="go" href="https://railway.com">railway.com →</a>
+    </article>
+    <article class="card">
+      <h4>Fly.io <span class="badge paid">Платено</span></h4>
+      <p>Докер контейнери близо до потребителите, заплащане на употреба (малко приложение излиза центове). За по-напреднали екипи.</p>
+      <a class="go" href="https://fly.io">fly.io →</a>
+    </article>
+  </div>
+
+  <div class="callout warn">
+    <p><strong>Две уловки на безплатния backend хостинг:</strong> (1) Преди демо — отворете си приложението 5 минути по-рано, за да се събуди, иначе публиката гледа зареждащ екран. (2) Файловата система е временна — качени файлове и SQLite бази <em>изчезват</em> при всеки deploy/рестарт. За данни ползвайте истинска база от секция <a href="#db">Бази данни</a>.</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section id="db">
+  <h2>Персистентни бази данни</h2>
+  <p class="lead">Данните трябва да живеят отделно от хостинга на кода (виж уловката горе). Всички изброени имат безплатен план, достатъчен за MVP.</p>
+
+  <div class="cards">
+    <article class="card">
+      <h4>Supabase <span class="badge tier">Free tier</span></h4>
+      <p>Postgres + готово удостоверяване (auth) + файлово хранилище + автоматичен REST API. Най-много готови неща наведнъж — за 2 седмици това е злато. 500 MB база, 2 активни проекта.</p>
+      <a class="go" href="https://supabase.com">supabase.com →</a>
+    </article>
+    <article class="card">
+      <h4>Neon <span class="badge tier">Free tier</span></h4>
+      <p>Чист serverless Postgres — ако ви трябва само база данни без екстрите. Щедър безплатен план, база-клонове за експерименти.</p>
+      <a class="go" href="https://neon.tech">neon.tech →</a>
+    </article>
+    <article class="card">
+      <h4>Firebase <span class="badge tier">Free tier</span></h4>
+      <p>Firestore (NoSQL) + auth + хостинг от Google. Данните се синхронизират в реално време — удобно за чатове и живи табла. Spark планът е безплатен.</p>
+      <a class="go" href="https://firebase.google.com">firebase.google.com →</a>
+    </article>
+    <article class="card">
+      <h4>MongoDB Atlas <span class="badge tier">Free tier</span></h4>
+      <p>Класическият NoSQL вариант — M0 клъстер с 512 MB безплатно завинаги. Ако вече знаете MongoDB от курсове, ползвайте него.</p>
+      <a class="go" href="https://www.mongodb.com/atlas">mongodb.com/atlas →</a>
+    </article>
+  </div>
+
+  <div class="callout warn">
+    <p><strong>Supabase заспива:</strong> безплатен проект се паузира след 7 дни без заявки към базата и се събужда ръчно от таблото (~30 сек). Ако оставите проекта след програмата и се върнете месец по-късно — първо го събудете, преди да решите, че „всичко е счупено“.</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section id="domains">
+  <h2>Собствен домейн и дългосрочен хостинг</h2>
+  <p class="lead">Домейнът е нужен за две неща: професионален адрес на приложението и (важно!) доставимост на имейлите ви — SPF/DKIM записите живеят в DNS-а на домейна.</p>
+
+  <div class="cards">
+    <article class="card">
+      <h4>Student Pack домейни <span class="badge student">Студентско</span></h4>
+      <p>Безплатен <code>.me</code> домейн (през Namecheap) или <code>.tech</code> за 1 година + SSL сертификат — включени в GitHub Student Pack. Започнете оттук, преди да плащате.</p>
+      <a class="go" href="https://education.github.com/pack">education.github.com/pack →</a>
+    </article>
+    <article class="card">
+      <h4>Porkbun <span class="badge paid">Платено</span></h4>
+      <p>Един от най-евтините регистратори с честни цени и на подновяване (<code>.com</code> ~$11/год, <code>.xyz</code> ~$2 първата година). Whois privacy е безплатно включен.</p>
+      <a class="go" href="https://porkbun.com">porkbun.com →</a>
+    </article>
+    <article class="card">
+      <h4>Cloudflare Registrar <span class="badge paid">Платено</span></h4>
+      <p>Продава домейни на себестойност (без надценка) и дава най-добрия безплатен DNS. Изисква сайтът ви да ползва Cloudflare DNS.</p>
+      <a class="go" href="https://www.cloudflare.com/products/registrar/">cloudflare.com →</a>
+    </article>
+    <article class="card">
+      <h4>Namecheap <span class="badge paid">Платено</span></h4>
+      <p>Популярен, лесен интерфейс, чести промоции за първата година (гледайте цената на подновяване!). Тук се взима безплатният студентски <code>.me</code>.</p>
+      <a class="go" href="https://namecheap.com">namecheap.com →</a>
+    </article>
+  </div>
+
+  <h3>Как се свързва домейн с Vercel/Netlify</h3>
+  <ol>
+    <li>В таблото на Vercel: Project → Settings → Domains → добавяте <code>vashproekt.me</code>.</li>
+    <li>Vercel ви показва какви DNS записи да сложите (обикновено един <code>A</code> запис за домейна и <code>CNAME</code> за <code>www</code>).</li>
+    <li>Добавяте ги в DNS панела на регистратора. До час домейнът работи, SSL сертификатът (https) се издава автоматично и безплатно.</li>
+  </ol>
+
+  <h3>Колко струва да поддържате проекта след програмата?</h3>
+  <ul class="links">
+    <li><strong>Статичен сайт / frontend:</strong> 0 лв. — безплатните планове на Vercel/Netlify/Cloudflare са достатъчни за години напред. Плащате само домейна (~20–25 лв/год).</li>
+    <li><strong>С backend и база:</strong> ~$5–7/мес (Railway Hobby или Render Starter, за да не заспива) + домейн. Supabase free tier често остава достатъчен.</li>
+    <li><strong>За любопитните:</strong> VPS от <a href="https://www.hetzner.com/cloud/">Hetzner</a> (~€4/мес) — цял собствен сървър, но всичко си го поддържате сами. Чудесен начин да се научи, лош начин да се спази срок.</li>
+  </ul>
+</section>
+
+<!-- ============================================================ -->
+<section id="marketing">
+  <h2>Маркетинг на проекта</h2>
+  <p class="lead">MVP без потребители е упражнение. Малък набор безплатни инструменти за визия, публикации и измерване — достатъчни за студентски проект.</p>
+
+  <h3>Визуални материали</h3>
+  <div class="cards">
+    <article class="card">
+      <h4>Canva <span class="badge tier">Free tier</span></h4>
+      <p>Стандартът за пост-визии, лога, презентации — с готови шаблони в правилните размери за всяка платформа. Безплатният план стига; студенти често взимат Pro безплатно през училище.</p>
+      <a class="go" href="https://canva.com">canva.com →</a>
+    </article>
+    <article class="card">
+      <h4>AI генериране на изображения <span class="badge tier">Free tier</span></h4>
+      <p><a href="https://gemini.google.com">Gemini</a> и <a href="https://copilot.microsoft.com">Microsoft Copilot</a> генерират изображения безплатно; <a href="https://ideogram.ai">Ideogram</a> (безплатни дневни кредити) е най-добрият, когато в картинката трябва да има четим текст — например банер с името на продукта.</p>
+      <a class="go" href="https://ideogram.ai">ideogram.ai →</a>
+    </article>
+    <article class="card">
+      <h4>CapCut <span class="badge tier">Free tier</span></h4>
+      <p>Бърз видео монтаж за кратки демо клипове и Reels/TikTok — субтитри, преходи, музика. Уеб и мобилна версия.</p>
+      <a class="go" href="https://capcut.com">capcut.com →</a>
+    </article>
+  </div>
+
+  <h3>Публикуване и разпространение</h3>
+  <div class="cards">
+    <article class="card">
+      <h4>Meta Business Suite <span class="badge free">Безплатно</span></h4>
+      <p>Официалният безплатен инструмент за Facebook + Instagram: насрочвате публикации предварително и виждате статистики на едно място.</p>
+      <a class="go" href="https://business.facebook.com">business.facebook.com →</a>
+    </article>
+    <article class="card">
+      <h4>Buffer <span class="badge tier">Free tier</span></h4>
+      <p>Насрочване на публикации в до 3 канала (напр. Instagram + LinkedIn + TikTok) от едно табло, безплатно. AI помощник за вариации на текста.</p>
+      <a class="go" href="https://buffer.com">buffer.com →</a>
+    </article>
+    <article class="card">
+      <h4>AI за текстове <span class="badge tier">Free tier</span></h4>
+      <p>Безплатните планове на <a href="https://claude.ai">Claude</a>, <a href="https://chatgpt.com">ChatGPT</a> и <a href="https://gemini.google.com">Gemini</a> са добри копирайтъри: дайте им описание на продукта и целевата аудитория и поискайте 5 варианта на пост + подходящи хаштагове. Пишете им на български — става чудесно.</p>
+      <a class="go" href="https://claude.ai">claude.ai →</a>
+    </article>
+    <article class="card">
+      <h4>Tally <span class="badge tier">Free tier</span></h4>
+      <p>Най-приятните безплатни форми — за списък с чакащи (waitlist), обратна връзка от първите потребители, записване за демо. Вгражда се в сайта ви с един ред.</p>
+      <a class="go" href="https://tally.so">tally.so →</a>
+    </article>
+  </div>
+
+  <h3>Измерване</h3>
+  <div class="cards">
+    <article class="card">
+      <h4>Cloudflare Web Analytics <span class="badge free">Безплатно</span></h4>
+      <p>Един script таг и виждате посещенията — без бисквитки, без GDPR банер, без да продавате данни. За MVP това стига.</p>
+      <a class="go" href="https://www.cloudflare.com/web-analytics/">cloudflare.com/web-analytics →</a>
+    </article>
+    <article class="card">
+      <h4>Google Analytics 4 <span class="badge free">Безплатно</span></h4>
+      <p>Индустриалният стандарт — по-мощен (събития, фунии), но по-сложен и изисква съгласие за бисквитки. Взимайте го само ако наистина ще гледате отчетите.</p>
+      <a class="go" href="https://analytics.google.com">analytics.google.com →</a>
+    </article>
+  </div>
+
+  <div class="callout tip">
+    <p><strong>Минималният маркетинг план за 2 седмици:</strong> (1) landing страница с едно изречение какво прави продуктът + Tally форма за интерес; (2) кратко демо видео под 60 сек; (3) по 2–3 публикации в каналите, където реално са вашите потребители — по-добре един канал постоянно, отколкото пет по веднъж.</p>
+  </div>
+</section>
+
+</main>
+</div>
+
+<footer class="site">
+  <p>Направено за менторската програма · Враца, лято 2026.</p>
+  <p>Цените и лимитите са проверени към <strong>юли 2026</strong> — безплатните планове се променят често, затова преди да заложите на услуга, погледнете официалната ѝ страница с цени.</p>
+</footer>
+
+<script>
+  const links = document.querySelectorAll('nav.toc a');
+  const byId = {};
+  links.forEach(a => byId[a.getAttribute('href').slice(1)] = a);
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(a => a.classList.remove('active'));
+        const link = byId[e.target.id];
+        link.classList.add('active');
+        link.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+      }
+    });
+  }, { rootMargin: '-15% 0px -75% 0px' });
+  document.querySelectorAll('main section').forEach(s => obs.observe(s));
+</script>
+
+</body>
+</html>

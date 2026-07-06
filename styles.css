@@ -1,0 +1,255 @@
+/* Ресурси за летни стажанти · Враца 2026 */
+
+:root {
+  --bg: #faf8f5;
+  --panel: #ffffff;
+  --text: #26221d;
+  --muted: #6d675e;
+  --accent: #b4541e;
+  --accent-soft: #f6e3d7;
+  --border: #e6e0d6;
+  --code-bg: #f1ede6;
+
+  --b-free: #1a7f4b;
+  --b-free-bg: #e2f3e9;
+  --b-tier: #1c62a8;
+  --b-tier-bg: #e3eef9;
+  --b-trial: #9a6700;
+  --b-trial-bg: #fbedcd;
+  --b-paid: #b13a3a;
+  --b-paid-bg: #f9e4e4;
+  --b-student: #6d3fb0;
+  --b-student-bg: #eee6f9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #17181c;
+    --panel: #1f2127;
+    --text: #e9e6e0;
+    --muted: #a29b8f;
+    --accent: #e08a4e;
+    --accent-soft: #3a2a1d;
+    --border: #32343c;
+    --code-bg: #26282f;
+
+    --b-free: #6fd39c;
+    --b-free-bg: #1c3327;
+    --b-tier: #82b8e8;
+    --b-tier-bg: #1c2c3d;
+    --b-trial: #e3b95c;
+    --b-trial-bg: #3a2f16;
+    --b-paid: #e58c8c;
+    --b-paid-bg: #3c2222;
+    --b-student: #bfa1ec;
+    --b-student-bg: #2d2340;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+a { color: var(--accent); }
+a:hover { text-decoration-thickness: 2px; }
+
+header.site {
+  border-bottom: 1px solid var(--border);
+  padding: 2.5rem 1.25rem 0;
+  text-align: center;
+}
+header.site h1 {
+  margin: 0 auto 0.4rem;
+  font-size: clamp(1.5rem, 4vw, 2.3rem);
+  letter-spacing: -0.02em;
+  max-width: 40ch;
+}
+header.site p.tagline {
+  margin: 0 auto;
+  color: var(--muted);
+  max-width: 55ch;
+}
+header.site svg.ridge {
+  display: block;
+  width: 100%;
+  max-width: 720px;
+  margin: 1.2rem auto -1px;
+  color: var(--accent);
+  opacity: 0.7;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  gap: 2.5rem;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+nav.toc {
+  position: sticky;
+  top: 1.5rem;
+  align-self: start;
+  font-size: 0.95rem;
+}
+nav.toc ul { list-style: none; margin: 0; padding: 0; }
+nav.toc a {
+  display: block;
+  padding: 0.35rem 0.75rem;
+  color: var(--muted);
+  text-decoration: none;
+  border-left: 2px solid var(--border);
+}
+nav.toc a:hover { color: var(--text); }
+nav.toc a.active {
+  color: var(--accent);
+  border-left-color: var(--accent);
+  font-weight: 600;
+}
+
+main { min-width: 0; }
+
+section { margin-bottom: 3.5rem; }
+section > h2 {
+  font-size: 1.45rem;
+  letter-spacing: -0.01em;
+  border-bottom: 2px solid var(--accent-soft);
+  padding-bottom: 0.4rem;
+  margin: 0 0 0.4rem;
+}
+section > p.lead { color: var(--muted); margin-top: 0.3rem; }
+
+h3 { font-size: 1.08rem; margin: 1.6rem 0 0.5rem; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.card h4 {
+  margin: 0 0 0.3rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.card p { margin: 0 0 0.6rem; font-size: 0.92rem; color: var(--muted); flex: 1; }
+.card a.go { font-size: 0.9rem; font-weight: 600; text-decoration: none; }
+.card a.go:hover { text-decoration: underline; }
+
+.badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.12rem 0.5rem;
+  border-radius: 99px;
+  white-space: nowrap;
+}
+.badge.free    { color: var(--b-free);    background: var(--b-free-bg); }
+.badge.tier    { color: var(--b-tier);    background: var(--b-tier-bg); }
+.badge.trial   { color: var(--b-trial);   background: var(--b-trial-bg); }
+.badge.paid    { color: var(--b-paid);    background: var(--b-paid-bg); }
+.badge.student { color: var(--b-student); background: var(--b-student-bg); }
+
+.callout {
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  background: var(--panel);
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+.callout.warn { border-left-color: var(--b-trial); }
+.callout.tip  { border-left-color: var(--b-free); }
+.callout p:first-child { margin-top: 0; }
+.callout p:last-child { margin-bottom: 0; }
+
+pre {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  overflow-x: auto;
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+code {
+  font-family: ui-monospace, "Cascadia Code", Menlo, Consolas, monospace;
+  background: var(--code-bg);
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  font-size: 0.88em;
+}
+pre code { background: none; padding: 0; }
+pre .cm { color: var(--muted); }
+
+ul.links { padding-left: 1.2rem; }
+ul.links li { margin: 0.3rem 0; }
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.2rem;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+  align-items: center;
+}
+.legend span.item { display: inline-flex; align-items: center; gap: 0.4rem; }
+
+footer.site {
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.88rem;
+  text-align: center;
+  padding: 1.5rem 1.25rem 2.5rem;
+}
+footer.site p { max-width: 60ch; margin: 0.4rem auto; }
+
+@media (max-width: 800px) {
+  .layout { grid-template-columns: 1fr; gap: 0; padding-top: 0; }
+  nav.toc {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    margin: 0 -1.25rem 1.5rem;
+    padding: 0.5rem 1.25rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  nav.toc ul { display: flex; gap: 0.4rem; width: max-content; }
+  nav.toc a {
+    border: 1px solid var(--border);
+    border-radius: 99px;
+    padding: 0.25rem 0.8rem;
+    white-space: nowrap;
+  }
+  nav.toc a.active {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+  }
+}
