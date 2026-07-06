@@ -74,7 +74,7 @@
   <div class="cards">
     <article class="card">
       <h4>GitHub Copilot <span class="badge student">Студентско</span></h4>
-      <p>Автодовършване и чат директно във VS Code. Безплатен за верифицирани студенти през Student Pack — най-лесният старт, ако вече имате учебен имейл.</p>
+      <p>Автодовършване, чат и <a href="https://code.visualstudio.com/docs/agents/overview">agent mode</a> директно във VS Code — агентът може сам да променя няколко файла и да пуска команди, без да инсталирате нищо допълнително. Безплатен за верифицирани ученици/студенти през Student Pack; има и ограничен безплатен план без верификация.</p>
       <a class="go" href="https://github.com/features/copilot">github.com/features/copilot →</a>
     </article>
     <article class="card">
@@ -135,10 +135,14 @@ git commit -m "Форма за вход"     <span class="cm"># 4. запис в
 git push                          <span class="cm"># 5. качвате в GitHub</span></code></pre>
   <p>Правила за екипа: <strong>pull преди да започнете</strong>, commit-вайте често (по-добре 10 малки, отколкото 1 огромен), пишете съобщения, които казват <em>какво</em> е направено.</p>
 
-  <h3>4. Конфликти</h3>
+  <h3>4. Същият цикъл, но с бутони — VS Code</h3>
+  <p>Всичко от горния цикъл го има и в Source Control панела на VS Code (иконата с разклонението вляво): промените се виждат като списък, <code>add</code> е „+“ до файла, <code>commit</code> е полето за съобщение + бутонът Commit, а <code>pull</code>/<code>push</code> е бутонът Sync Changes. При конфликт VS Code отваря удобен редактор с бутони Accept Current / Incoming / Both — по-лесно от търсенето на маркерите на ръка. Подробно: <a href="https://code.visualstudio.com/docs/sourcecontrol/overview">Using Git source control in VS Code</a>.</p>
+  <p>Ползвайте UI-а свободно, но знайте кои команди натиска той вместо вас — когато нещо се обърка, решението почти винаги минава през терминала. Затова първо разберете цикъла от т. 3.</p>
+
+  <h3>5. Конфликти</h3>
   <p>Ако двама сте пипали един и същи ред, при <code>git pull</code> Git ще маркира файла с <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>. Отворете файла, оставете верния вариант, изтрийте маркерите и направете <code>git add .</code> + <code>git commit</code>. Не е страшно — случва се на всички.</p>
 
-  <h3>5. .gitignore — какво НЕ се качва</h3>
+  <h3>6. .gitignore — какво НЕ се качва</h3>
   <p>Създайте файл <code>.gitignore</code> в корена на проекта още в началото:</p>
   <pre><code>node_modules/
 __pycache__/
@@ -149,7 +153,7 @@ __pycache__/
     <p><strong>Никога не качвайте пароли и API ключове в Git.</strong> Дръжте ги във файл <code>.env</code>, който е в <code>.gitignore</code>. Веднъж качен, ключът остава в историята завинаги (дори да го изтриете после) и ботове го намират за минути — тогава единственото решение е да го смените от сайта на услугата.</p>
   </div>
 
-  <h3>6. Работа от различни (споделени) компютри</h3>
+  <h3>7. Работа от различни (споделени) компютри</h3>
   <p>Вие не работите всеки ден на една и съща машина, а компютрите са споделени. Проблемът: ако запазите паролата/токена си на диска, следващият човек на този компютър може да пише в GitHub от ваше име. Ето безопасната схема:</p>
   <ol>
     <li><strong>Направете си fine-grained token вместо парола:</strong> в GitHub → Settings → Developer settings → <a href="https://github.com/settings/personal-access-tokens">Fine-grained personal access tokens</a>. Ограничете го само до repo-то на проекта, права „Contents: Read and write“, и срок на валидност до края на програмата. Този token се използва вместо парола при <code>git push</code>. Ако изтече ключът — правите нов за 2 минути, а откраднат token не дава достъп до целия ви акаунт.</li>
@@ -162,7 +166,7 @@ __pycache__/
     <p><strong>Алтернатива без нищо локално:</strong> <a href="https://github.com/features/codespaces">GitHub Codespaces</a> — цял VS Code в браузъра, закачен за repo-то ви. Нищо не се пази на споделения компютър, а безплатният лимит е 120 core-часа на месец. Влизате от кой да е компютър само с GitHub акаунта си.</p>
   </div>
 
-  <h3>7. Клонове (branches) — ако ви остане време</h3>
+  <h3>8. Клонове (branches) — ако ви остане време</h3>
   <p>За двуседмичен спринт е приемливо всички да работят в <code>main</code> с често pull-ване. Ако екипът е 3+ души и се настъпвате, минете на клонове:</p>
   <pre><code>git switch -c nova-funkcia     <span class="cm"># нов клон</span>
 <span class="cm"># ...работите, add, commit...</span>
@@ -430,7 +434,7 @@ git push -u origin nova-funkcia
     </article>
     <article class="card">
       <h4>AI генериране на изображения <span class="badge tier">Free tier</span></h4>
-      <p><a href="https://gemini.google.com">Gemini</a> и <a href="https://copilot.microsoft.com">Microsoft Copilot</a> генерират изображения безплатно; <a href="https://ideogram.ai">Ideogram</a> (безплатни дневни кредити) е най-добрият, когато в картинката трябва да има четим текст — например банер с името на продукта.</p>
+      <p><a href="https://gemini.google.com">Gemini</a> и <a href="https://copilot.microsoft.com">Microsoft Copilot</a> генерират изображения безплатно; <a href="https://ideogram.ai">Ideogram</a> (безплатни дневни кредити) е най-добрият, когато в картинката трябва да има четим текст — например банер с името на продукта; <a href="https://leonardo.ai">Leonardo.ai</a> също дава безплатни кредити всеки ден и е силен за по-художествени визии.</p>
       <a class="go" href="https://ideogram.ai">ideogram.ai →</a>
     </article>
     <article class="card">
@@ -472,11 +476,17 @@ git push -u origin nova-funkcia
       <a class="go" href="https://www.cloudflare.com/web-analytics/">cloudflare.com/web-analytics →</a>
     </article>
     <article class="card">
+      <h4>Microsoft Clarity <span class="badge free">Безплатно</span></h4>
+      <p>Heatmaps и записи на реални сесии — виждате къде хората кликат, докъде скролват и къде се отказват. Напълно безплатно, без лимити. Отговаря на „какво правят на страницата“, докато GA отговаря на „колко души дойдоха“.</p>
+      <a class="go" href="https://clarity.microsoft.com">clarity.microsoft.com →</a>
+    </article>
+    <article class="card">
       <h4>Google Analytics 4 <span class="badge free">Безплатно</span></h4>
       <p>Индустриалният стандарт — по-мощен (събития, фунии), но по-сложен и изисква съгласие за бисквитки. Взимайте го само ако наистина ще гледате отчетите.</p>
       <a class="go" href="https://analytics.google.com">analytics.google.com →</a>
     </article>
   </div>
+  <p>Съвет: създайте Clarity/GA акаунтите от името на екипа и добавете менторите си като viewers — така те могат да гледат данните и да ви помагат, а собствеността остава ваша и след програмата.</p>
 
   <div class="callout tip">
     <p><strong>Минималният маркетинг план за 2 седмици:</strong> (1) landing страница с едно изречение какво прави продуктът + Tally форма за интерес; (2) кратко демо видео под 60 сек; (3) по 2–3 публикации в каналите, където реално са вашите потребители — по-добре един канал постоянно, отколкото пет по веднъж.</p>
