@@ -601,6 +601,12 @@ git push -u origin nova-funkcia
     });
   }, { rootMargin: '-15% 0px -75% 0px' });
   document.querySelectorAll('main section').forEach(s => obs.observe(s));
+
+  // всички външни линкове се отварят в нов таб; вътрешните котви (#...) остават в същия
+  document.querySelectorAll('a[href^="http"]').forEach(a => {
+    a.target = '_blank';
+    a.rel = 'noopener';
+  });
 </script>
 
 </body>
