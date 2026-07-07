@@ -562,17 +562,42 @@ git push -u origin nova-funkcia
   });
   paint();
 
+  const nav = document.querySelector('nav.toc');
   const links = document.querySelectorAll('nav.toc a');
   const byId = {};
   links.forEach(a => byId[a.getAttribute('href').slice(1)] = a);
+
+  let observerPaused = false;
+  links.forEach(a => {
+    a.addEventListener('click', () => {
+      observerPaused = true;
+      setTimeout(() => { observerPaused = false; }, 800);
+    });
+  });
+
+  const scrollNavLinkIntoView = (link) => {
+    if (!matchMedia('(max-width: 800px)').matches) {
+      link.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+      return;
+    }
+    const pad = 16;
+    const navRect = nav.getBoundingClientRect();
+    const linkRect = link.getBoundingClientRect();
+    if (linkRect.left < navRect.left + pad) {
+      nav.scrollTo({ left: nav.scrollLeft + (linkRect.left - navRect.left - pad), behavior: 'smooth' });
+    } else if (linkRect.right > navRect.right - pad) {
+      nav.scrollTo({ left: nav.scrollLeft + (linkRect.right - navRect.right + pad), behavior: 'smooth' });
+    }
+  };
+
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => {
-      if (e.isIntersecting) {
-        links.forEach(a => a.classList.remove('active'));
-        const link = byId[e.target.id];
-        link.classList.add('active');
-        link.scrollIntoView({ block: 'nearest', inline: 'nearest' });
-      }
+      if (!e.isIntersecting || observerPaused) return;
+      links.forEach(a => a.classList.remove('active'));
+      const link = byId[e.target.id];
+      if (!link) return;
+      link.classList.add('active');
+      scrollNavLinkIntoView(link);
     });
   }, { rootMargin: '-15% 0px -75% 0px' });
   document.querySelectorAll('main section').forEach(s => obs.observe(s));
